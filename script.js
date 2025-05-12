@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   productList.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
       const productId = e.target.getAttribute("data-id");
-      const product = products.find((p) => p.id === productId);
+      const product = products.find((p) => p.id === Number(productId));
       addToCart(product);
     }
   });
@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
         ${item.name} - $${item.price.toFixed(2)}`;
-        cartItem.appendChild(cartItem);
+        cartItems.appendChild(cartItem);
         totalPriceDisplay.textContent = `${totalPrice.toFixed(2)}`;
+        console.log(totalPrice);
       });
     } else {
       emptyCartMessage.classList.remove("hidden");
