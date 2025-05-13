@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("body").style.backgroundColor = "crimson";
+  document.querySelector("body").style.backgroundColor = "#0e0e0e";
 
   const products = [
     { id: 1, name: "Product 1", price: 9.99 },

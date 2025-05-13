@@ -1,6 +1,10 @@
 .container {
-  background-color: blueviolet;
+  background-color: rgb(53, 8, 105);
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #f0f0f0;
+}
+.hidden {
+  display: none;
 }
